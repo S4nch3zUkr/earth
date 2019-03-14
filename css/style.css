@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(materials/bg.png);
+}
+.container {
+    width: 220px;
+    height: 220px;
+    margin: 200px auto;
+    position: relative;
+    padding: 40px;
+}
+.sun {
+    width: 220px;
+    height: 220px;
+    background: url(materials/sun.png) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+.earth {
+    width: 60px;
+    height: 60px;
+    background: url(materials/earth.png) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 20px 20px 10px 2px #000000cc;
+    animation: ro 4s infinite;
+}
+@keyframes ro {
+    50% {
+        left: calc(100% - 40px);
+        top: calc(100% - 40px);
+    }
+    100% {
+        z-index: -1;
+
+    }
+}
